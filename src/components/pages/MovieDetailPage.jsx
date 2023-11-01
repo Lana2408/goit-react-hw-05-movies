@@ -17,6 +17,8 @@ const MovieDetail = () => {
 
   const { movieId } = useParams();
 
+  useEffect(() => {
+    if (!movieId) return;
   const fetchMovieById = async () => {
     try {
       setIsLoading(true);
@@ -31,7 +33,7 @@ const MovieDetail = () => {
     }
   };
 
-  useEffect(() => {
+
     fetchMovieById();
   }, [movieId]);
 

@@ -15,6 +15,9 @@ const Cast = () => {
 
   const { movieId } = useParams();
 
+  useEffect(() => {
+    if (!movieId) return;
+    
   const fetchCast = async () => {
     try {
       setIsLoading(true);
@@ -29,7 +32,7 @@ const Cast = () => {
     }
   };
 
-  useEffect(() => {
+
     fetchCast();
   }, [movieId]);
 

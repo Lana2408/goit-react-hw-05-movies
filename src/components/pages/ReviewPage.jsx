@@ -12,9 +12,12 @@ const Reviews = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
+    if (!movieId) return;
+
     const fetchReviews = async () => {
-      setIsLoading(true);
+
       try {
+        setIsLoading(true);
         const reviewsData = await getMoviesReviews(movieId);
         setReviews(reviewsData.results);
       } catch (error) {
