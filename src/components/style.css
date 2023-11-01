@@ -1,0 +1,21 @@
+.div {
+ display: flex;
+ 
+
+}
+.moviesListImg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.moviesListLink {
+  text-decoration: none;
+  color: black;
+
+  list-style: none;
+}
+
+h2 {
+  font-size: 16px;
+}
